@@ -1,4 +1,4 @@
-
+require "./lib/*"
 # Part 1: Object Models
 # Create a lib directory and put the classes you create in there.
 # Create a Class for song, artist, and genre. Use an individual file for each class.

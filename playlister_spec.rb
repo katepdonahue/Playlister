@@ -1,3 +1,7 @@
+require './lib/artist_class'
+require './lib/genre_class'
+require './lib/song_class'
+
 describe "playlister" do
   it 'Can initialize an Artist' do
     lambda {Artist.new}.should_not raise_error
@@ -81,7 +85,7 @@ describe "playlister" do
     [1,2].each do
       song = Song.new
       song.genre = genre
-    end
+    end 
 
     genre.songs.count.should eq(2)
   end
