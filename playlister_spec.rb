@@ -130,18 +130,23 @@ describe "playlister" do
   # Complete any song test that is pending (undefined).
 
   it 'Can initialize a song' do
-
+    expect(Song.new).to_not raise_error
   end
 
   it 'A song can have a name' do
-
+    song = Song.new.tap{|s| s.name = "Kate"}
+    expect(song.name).to eq("Kate")
   end
 
   it 'A song can have a genre' do
-
+    song = Song.new
+    song.genre = Genre.new.tap{|g| g.name = "rap"}
+    expect(song.genre.name).to eq("rap")
   end
 
   it 'A song has an artist' do
-
+    song = Song.new
+    song.artist = Artist.new.tap{|a| a.name = "R.Kelly"}
+    expect(song.artist.name).to eq("R.Kelly")
   end
 end
